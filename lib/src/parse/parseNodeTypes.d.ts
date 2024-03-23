@@ -28,6 +28,10 @@ export type DiscriminatedUnionNode = {
     };
     discriminatorName: string;
 } & SharedInputNodeProperties;
+export type UnionNode = {
+    type: "union";
+    values: LiteralNode[];
+} & SharedInputNodeProperties;
 export type LiteralNode = {
     type: "literal";
     value: string | boolean | number | bigint | null | undefined;
@@ -44,7 +48,7 @@ export type BooleanNode = {
 export type UnsupportedNode = {
     type: "unsupported";
 } & SharedInputNodeProperties;
-export type ParsedInputNode = ArrayNode | ObjectNode | EnumNode | DiscriminatedUnionNode | LiteralNode | StringNode | NumberNode | BooleanNode | UnsupportedNode;
+export type ParsedInputNode = ArrayNode | ObjectNode | EnumNode | DiscriminatedUnionNode | UnionNode | LiteralNode | StringNode | NumberNode | BooleanNode | UnsupportedNode;
 export type AddDataFunctions = {
     addDescriptionIfExists: (def: {
         description?: string;
