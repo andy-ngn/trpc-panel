@@ -623,6 +623,9 @@ video {
 .w-6 {
   width: 1.5rem;
 }
+.w-\[26\.002px\] {
+  width: 26.002px;
+}
 .w-full {
   width: 100%;
 }
@@ -667,6 +670,12 @@ video {
 }
 .items-center {
   align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
@@ -898,9 +907,6 @@ video {
 }
 .bg-whiteTransparent {
   background-color: #ffffff77;
-}
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.7;
 }
 .p-1 {
   padding: 0.25rem;
